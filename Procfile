@@ -1,0 +1,1 @@
+web: PYTHONPATH=$PYTHONPATH:back_part gunicorn --bind 0.0.0.0:$PORT "back_part.carddate:create_app()"

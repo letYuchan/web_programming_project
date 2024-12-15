@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="letYuchan, guapa0girl">
+    <meta name="description" content="This service is a blind date site where you can find out the other person's information through random cards and develop into lovers through contact.">
+    <link rel="stylesheet" href="../static/css/recommend.css">
+    <link rel="shortcut icon" href="../static/assets/teamLogo.svg">
+    <script src="../static/src/recommendOpen/aiOpen.js" type="module"></script>
+    <script src="../static/src/recommendOpen/zoomIn.js" type="module"></script>
+    <title>Card Opening(추천카드)</title>
+</head>
+<body>
+    <script src="../static/src/login/univ_api.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            checkAuth(); 
+        });
+    </script>
+    <header id="header" aria-label="title, logo">
+        <div class="header__dev-container">
+            <img class="header__img" src="../static/assets/teamLogo.svg" alt="학교로고">
+            <h1 class="header__title">명함소개팅</h1>
+        </div>
+    </header>
+    <main id="main" aria-label="Opening AI service card">
+        <main id="main">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front"></div>
+                    <div class="card-back">
+                        <div class="card-image">
+                            <img src="../static/assets/1.cuteDog.png" alt="동물 이미지">
+                        </div>
+                        <div class="card-info">
+                            <div class="info-row"><span class="label">성별 :</span><span class="value gender"></span></div>
+                            <div class="info-row hidden"><span class="label">이름 :</span><span class="value name"></span></div>
+                            <div class="info-row"><span class="label">학과 :</span><span class="value major"></span></div>
+                            <div class="info-row"><span class="label">학번(나이) :</span><span class="value studentID_age"></span></div>
+                            <div class="info-row"><span class="label">MBTI :</span><span class="value mbti"></span></div>
+                            <div class="info-row"><span class="label">취미 :</span><span class="value hobbies"></span></div>
+                            <div class="info-row hidden"><span class="label">연락처 :</span><span class="value contact"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container" aria-label="In order, buttons to request the card, confirm">
+                <button id="openButton">명함오픈</button>
+                <button id="confirmButton" disabled>확정하기</button>
+            </div>
+            <button id="nextButton" disabled>다음페이지</a></button>
+        </main>
+</body>
+</html>
